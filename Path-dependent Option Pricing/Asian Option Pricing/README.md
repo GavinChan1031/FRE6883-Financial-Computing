@@ -13,7 +13,6 @@ In this folder we use Monte Carlo Simulation the simulate the payoff of Asian Op
   - Control Variate Func **PriceByVarRedMC()**: Control Variate pricing function by using child class DifferenceOfOptions and PriceByBSFormula (Geometric Asian Call can be computed analytically).
   - Pure Virtual function **Payoff()**: PriceByMC() uses different implementation of Payoff() depending on the derived classes.
   - Virtual **PriceByBSFormula()**: function to calculate Geometric Asian Call Price from Black-Scholes formula.
-  - 
 
 2. **Child Class**:
   a) DifferenceOfOptions. **Payoff()** of difference between Arithmetic Asian Call and Geometric Asian Call. This class combines two options and uses pointers \*Ptr1 and \*Ptr2 to access the payoff function.
