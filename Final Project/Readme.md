@@ -24,12 +24,12 @@
   - Exit your program.
   
 ## Calculation Details:
-1. Based on the 2nd quarter of 2021 earnings announcement for Russell 3000 stocks (See the Earnings Announcements sheet), sort all the surprise% in ascending order, and split all the stocks into 3 groups with relatively equivalent numbers of stocks:
+- Based on the 2nd quarter of 2021 earnings announcement for Russell 3000 stocks (See the Earnings Announcements sheet), sort all the surprise% in ascending order, and split all the stocks into 3 groups with relatively equivalent numbers of stocks:
   - Highest surprise group: Beat Estimate Group
   - Lowest surprise group: Miss Estimate Group
   - The rest stocks in between: Meet Estimate Group
-2. Define day “zero” for a stock as the day the earning is announced.
-3. Implement Bootstrapping:
+- Define day “zero” for a stock as the day the earning is announced.
+- Implement Bootstrapping:
   - Randomly selecting 80 stocks from each group, total 240 stocks.
   - Use libcurl lib to retrieve 2N+1 days of historical prices for Russell 3000 stocks and ETF ticker IWV (used as market benchmark) around the date of earning release (You could enhance our class example for this purpose). N is integer which must be greater or equal to 60, will be entered by users. Users will be warned if there are no enough historical prices for 2N+1.
   - For each stock calculate the daily returns Rit for N-1 days before the day “zero” and N days after, such as t = -60, -59,…-1, 0, 1,…, 59, 60; Using adjusted daily closing price for calculation
@@ -40,3 +40,4 @@
   - Repeat steps a to g 40 times to create 40 samplings and then calculate
     - Average AAR and CAAR for 40 samplings for each group
     - Standard Deviation of AAR and CAAR for each group
+- Generate a gnuplot chart show the averaged CAAR of all three groups and discuss the impact the earning releases on their stock prices
