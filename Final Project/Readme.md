@@ -1,4 +1,5 @@
 # FRE6883 Final Project
+Here is the Final Project for FRE6883. The Programming Requirements and Calculation Details are as follows:
 
 ## Programming Requirements:
 - Use liburl to retrieve historical price data from eodhistoricaldata.com: A function retrieves the adjusted close prices for selected Russell 3000 stocks and IWV(Russell 3000 ETF used as market benchmark) into memory.
